@@ -9,16 +9,16 @@ using static idk.Data;
 
 namespace idk
 {
-    class Rect
+    public class Rect
     {
-        SpriteBatch spriteBatch;
+        public SpriteBatch spriteBatch;
         public int X, Y, sX, sY;
-        Color c;
-        Texture2D rectangleTexture;
+        public Color c;
+        public Texture2D rectangleTexture;
         public Rect(int posX, int posY, Color color, SpriteBatch sb, int sizeX = 10, int sizeY = 10)
         {
 
-            rectangleTexture = new Texture2D(Data.graphics.GraphicsDevice, 1, 1);
+            rectangleTexture = new Texture2D(graphics.GraphicsDevice, 1, 1);
             rectangleTexture.SetData(new[] { Color.White });
             spriteBatch = sb;
             X = posX;

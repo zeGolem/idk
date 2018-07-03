@@ -15,12 +15,12 @@ namespace idk
         SpriteFont font;
         SpriteBatch spriteBatch;
         Rect player;
-        Rect[] rects = new Rect[2048];
+        
 
 
         public Game1()
         {
-            Data.graphics = new GraphicsDeviceManager(this);
+            graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
         }
@@ -34,15 +34,13 @@ namespace idk
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            Data.currColor = Color.White;
+            currColor = Color.White;
             
             font = Content.Load<SpriteFont>("Font");
-            Data.graphics.PreferredBackBufferHeight = 720;
-            Data.graphics.PreferredBackBufferWidth = 1280;
-            Data.graphics.ApplyChanges();
+            graphics.PreferredBackBufferHeight = 720;
+            graphics.PreferredBackBufferWidth = 1280;
+            graphics.ApplyChanges();
 
-            Data.rect = new Texture2D(Data.graphics.GraphicsDevice, 1, 1);
-            Data.rect.SetData(new[] { Color.White });
             player = new Rect(width / 2, height / 2, Color.Beige, spriteBatch, 10, 20);
 
 
@@ -58,8 +56,8 @@ namespace idk
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            Data.mousePointer = new Texture2D(GraphicsDevice, 1, 1);
-            Data.mousePointer.SetData(new[] { Color.White });
+            mousePointer = new Texture2D(GraphicsDevice, 1, 1);
+            mousePointer.SetData(new[] { Color.White });
 
             
 
@@ -83,10 +81,10 @@ namespace idk
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            Data.timer++;
+            timer++;
             
-            Data.timeSinceLastKeyStroke--;
-            Data.mState = Mouse.GetState();
+            timeSinceLastKeyStroke--;
+            mState = Mouse.GetState();
 
             
 
@@ -94,60 +92,56 @@ namespace idk
                 Exit();
             var kstate = Keyboard.GetState();
 
-            if(Data.mState.LeftButton == ButtonState.Pressed || kstate.IsKeyDown(Keys.A))
+            if(mState.LeftButton == ButtonState.Pressed || kstate.IsKeyDown(Keys.A))
             {
 
-                rects[Data.rectID] = new Rect(Data.mState.X, Data.mState.Y, Data.currColor, spriteBatch);
-                Data.rectID++;
+                rects[rectID] = new Rect(mState.X, mState.Y, currColor, spriteBatch);
+                rectID++;
                 //Console.WriteLine("Rectangle count is now : " + Data.rectID);
 
             }
 
-            if (kstate.IsKeyDown(Keys.LeftControl) && kstate.IsKeyDown(Keys.S)&& Data.timeSinceLastKeyStroke <= 0)
+            if (kstate.IsKeyDown(Keys.LeftControl) && kstate.IsKeyDown(Keys.S)&& timeSinceLastKeyStroke <= 0)
             {
 
-                SaveWindow = new SaveMGR(Data.rectsPos, Data.rectID, Data.rectColor);
+                SaveWindow = new SaveMGR(rectsPos, rectID, rectColor);
                 SaveWindow.ShowDialog();
-                Data.timeSinceLastKeyStroke = 50;
+                timeSinceLastKeyStroke = 50;
 
             }
             
-            //if (kstate.IsKeyDown(Keys.D) && Data.timeSinceLastKeyStroke <= 0)
-            //{
-            //    Console.WriteLine(Data.timeSinceLastKeyStroke);
-            //    Data.timeSinceLastKeyStroke = 50;
-            //}
+            
                 
 
-            if (kstate.IsKeyDown(Keys.LeftControl) && kstate.IsKeyDown(Keys.L) && Data.timeSinceLastKeyStroke <= 0)
+            if (kstate.IsKeyDown(Keys.LeftControl) && kstate.IsKeyDown(Keys.L) && timeSinceLastKeyStroke <= 0)
             {
 
                 LoadMGR loadMGR = new LoadMGR();
                 loadMGR.ShowDialog();
-                Data.timeSinceLastKeyStroke = 50;
+                timeSinceLastKeyStroke = 50;
 
             }
             if(kstate.IsKeyDown(Keys.Left) && Data.timeSinceLastKeyStroke <= 0)
             {
-                Data.timeSinceLastKeyStroke = 25;
-                Data.colorID--;
+                timeSinceLastKeyStroke = 25;
+                colorID--;
             }
             if (kstate.IsKeyDown(Keys.Right) && Data.timeSinceLastKeyStroke <= 0)
             {
-                Data.timeSinceLastKeyStroke = 25;
-                Data.colorID++;
+                timeSinceLastKeyStroke = 25;
+                colorID++;
             }
 
             if (kstate.IsKeyDown(Keys.F11) && Data.timeSinceLastKeyStroke <= 0)
             {
-                Data.timeSinceLastKeyStroke = 25;
-                Data.graphics.ToggleFullScreen();
+                timeSinceLastKeyStroke = 25;
+                graphics.ToggleFullScreen();
             }
             if (kstate.IsKeyDown(Keys.C))
             {
 
-                Data.rectsPos = new Vector2[4096];
-                Data.rectID = 0;
+                rectsPos = new Vector2[4096];
+                rectID = 0;
 
             }
             if (kstate.IsKeyDown(Keys.Q))
@@ -181,26 +175,27 @@ namespace idk
 
             // TODO: Add your update logic here
 
-            switch (Data.colorID)
+            switch (colorID)
             {
                 case 0:
-                    Data.currColor = Color.White;
+                    currColor = Color.White;
                     break;
 
                 case -1:
-                    Data.currColor = Color.Blue;
+                    currColor = Color.Blue;
                     break;
 
                 case 1:
-                    Data.currColor = Color.Red;
+                    currColor = Color.Red;
                     break;
 
                 default:
-                    Data.currColor = Color.Transparent;
+                    currColor = Color.Transparent;
                     break;
             }
-
-            Data.FPS = (int)(1/gameTime.ElapsedGameTime.TotalSeconds);
+            
+            //That should give me the framerate of the game, but it doesn't seem to work...
+            FPS = (int)(1/gameTime.ElapsedGameTime.TotalSeconds);
 
             base.Update(gameTime);
             Console.WriteLine("Player pos : X={0} Y={1}", player.X, player.Y);
@@ -213,27 +208,16 @@ namespace idk
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            Data.height = Data.graphics.PreferredBackBufferHeight;
-            Data.width = Data.graphics.PreferredBackBufferWidth;
+            height = graphics.PreferredBackBufferHeight;
+            width = graphics.PreferredBackBufferWidth;
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
 
-            if (Data.rectID != 0)
+            if (rectID != 0)
             {
-                //for(int i = 0; i< Data.rectID; i++)
-                //{
-
-                //    spriteBatch.Draw(Data.rect, new Rectangle((int)Data.rectsPos[i].X, (int)Data.rectsPos[i].Y, 10, 10), Data.rectColor[i]);
-
-                //}
-                /*for (int i = 0; i < lRectId; i++)
-                {
-
-                    spriteBatch.Draw(lRects[i], new Rectangle((int)lRectsPos[i].X, (int)lRectsPos[i].Y, 10, 10), Color.Wheat);
-
-                }*/
+                
                 foreach(Rect r in rects)
                 {
                     if(r!=null)
@@ -244,20 +228,20 @@ namespace idk
                 player.Draw(spriteBatch);
                 
 
-            spriteBatch.Draw(Data.mousePointer, new Rectangle(Data.mState.X, Data.mState.Y, 10, 10), Color.Chocolate);
+            spriteBatch.Draw(mousePointer, new Rectangle(mState.X, mState.Y, 10, 10), Color.Chocolate);
             //COLOR SELECTOR
 
             //SQUARE ARROUND DA COLOR
-            spriteBatch.Draw(Data.mousePointer, new Rectangle(Data.width / 2 - 60 / 2 + (Data.colorID * 50), Data.height - 55, 60, 60), Color.Black);
+            spriteBatch.Draw(mousePointer, new Rectangle(width / 2 - 60 / 2 + (colorID * 50), height - 55, 60, 60), Color.Black);
             //DA COLOR THEMSELVES
-            spriteBatch.Draw(Data.mousePointer, new Rectangle(Data.width / 2 - 50 / 2, Data.height - 50, 50, 50), Color.White);
-            spriteBatch.Draw(Data.mousePointer, new Rectangle(Data.width / 2 - 50 / 2 - 50, Data.height - 50, 50, 50), Color.Blue);
-            spriteBatch.Draw(Data.mousePointer, new Rectangle(Data.width / 2 - 50 / 2 + 50, Data.height - 50, 50, 50), Color.Red);
+            spriteBatch.Draw(mousePointer, new Rectangle(width / 2 - 50 / 2, height - 50, 50, 50), Color.White);
+            spriteBatch.Draw(mousePointer, new Rectangle(width / 2 - 50 / 2 - 50, height - 50, 50, 50), Color.Blue);
+            spriteBatch.Draw(mousePointer, new Rectangle(width / 2 - 50 / 2 + 50, height - 50, 50, 50), Color.Red);
 
 
             //WRITING DA STUFF
 
-            spriteBatch.DrawString(font, "Stuff counter : " + Data.rectID, new Vector2(0, 0), Color.Black);
+            spriteBatch.DrawString(font, "Things counter : " + rectID, new Vector2(0, 0), Color.Black);
             spriteBatch.End();
             
 
