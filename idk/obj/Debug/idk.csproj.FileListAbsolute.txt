@@ -1,0 +1,72 @@
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\Content\ball.xnb
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\idk.exe
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\idk.pdb
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+D:\CS Opengl\VS\idk\idk\obj\Debug\idk.csprojAssemblyReference.cache
+D:\CS Opengl\VS\idk\idk\obj\Debug\idk.csproj.CoreCompileInputs.cache
+D:\CS Opengl\VS\idk\idk\obj\Debug\idk.csproj.CopyComplete
+D:\CS Opengl\VS\idk\idk\obj\Debug\idk.exe
+D:\CS Opengl\VS\idk\idk\obj\Debug\idk.pdb
+D:\CS Opengl\VS\idk\idk\obj\Debug\idk.SaveMGR.resources
+D:\CS Opengl\VS\idk\idk\obj\Debug\idk.csproj.GenerateResource.cache
+D:\CS Opengl\VS\idk\idk\obj\Debug\idk.LoadMGR.resources
+D:\CS Opengl\VS\idk\idk\bin\DesktopGL\AnyCPU\Debug\Content\Font.xnb
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\Content\ball.xnb
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\Content\Font.xnb
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\idk.exe
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\idk.pdb
+D:\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+D:\dev\idk\idk\obj\Debug\idk.csprojAssemblyReference.cache
+D:\dev\idk\idk\obj\Debug\idk.LoadMGR.resources
+D:\dev\idk\idk\obj\Debug\idk.SaveMGR.resources
+D:\dev\idk\idk\obj\Debug\idk.csproj.GenerateResource.cache
+D:\dev\idk\idk\obj\Debug\idk.csproj.CoreCompileInputs.cache
+D:\dev\idk\idk\obj\Debug\idk.csproj.CopyComplete
+D:\dev\idk\idk\obj\Debug\idk.exe
+D:\dev\idk\idk\obj\Debug\idk.pdb
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\Content\ball.xnb
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\Content\Font.xnb
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\idk.exe
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\idk.pdb
+D:\GDrive\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+D:\GDrive\dev\idk\idk\obj\Debug\idk.csprojAssemblyReference.cache
+D:\GDrive\dev\idk\idk\obj\Debug\idk.LoadMGR.resources
+D:\GDrive\dev\idk\idk\obj\Debug\idk.SaveMGR.resources
+D:\GDrive\dev\idk\idk\obj\Debug\idk.csproj.GenerateResource.cache
+D:\GDrive\dev\idk\idk\obj\Debug\idk.csproj.CoreCompileInputs.cache
+D:\GDrive\dev\idk\idk\obj\Debug\idk.csproj.CopyComplete
+D:\GDrive\dev\idk\idk\obj\Debug\idk.exe
+D:\GDrive\dev\idk\idk\obj\Debug\idk.pdb
