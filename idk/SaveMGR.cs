@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Xna.Framework;
+using static idk.Data;
 
 namespace idk
 {
@@ -27,21 +28,21 @@ namespace idk
 
         private void SaveMGR_Load(object sender, EventArgs e)
         {
-
+            //loading the data in the listbox
             dataDisplay.Items.Remove(1);
             for (int id = 0; id < count; id++)
-                dataDisplay.Items.Add(id + ": " + "X=" + rectPos[id].X + "; Y=" + rectPos[id].Y + "; Color : R= " + rectColor[id].R + " G= " + rectColor[id].G+" B= " + rectColor[id].B);
+                dataDisplay.Items.Add(id + ": " + "X=" + rects[id].X + "; Y=" + rects[id].Y + "; Color : R= " + rects[id].c.R + " G= " + rects[id].c.G+" B= " + rects[id].c.B);
 
         }
 
         private void SaveBTN_Click(object sender, EventArgs e)
         {
-
+            //encodes the data
             string saveData = "";
             for (int i = 0; i < count; i++)
             {
 
-                saveData += rectPos[i].X + ";" + rectPos[i].Y + ";" + rectColor[i].R + ";" + rectColor[i].G + ";" + rectColor[i].B + "/";
+                saveData += rects[i].X + ";" + rects[i].Y + ";" + rects[i].c.R + ";" + rects[i].c.G + ";" + rects[i].c.B + "/";
 
             }
             System.IO.File.WriteAllText(@fpath, saveData);

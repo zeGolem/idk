@@ -15,12 +15,11 @@ namespace idk
         public int X, Y, sX, sY;
         public Color c;
         public Texture2D rectangleTexture;
-        public Rect(int posX, int posY, Color color, SpriteBatch sb, int sizeX = 10, int sizeY = 10)
+        public Rect(int posX, int posY, Color color, int sizeX = 10, int sizeY = 10)
         {
 
             rectangleTexture = new Texture2D(graphics.GraphicsDevice, 1, 1);
             rectangleTexture.SetData(new[] { Color.White });
-            spriteBatch = sb;
             X = posX;
             Y = posY;
             sX = sizeX;

@@ -41,7 +41,7 @@ namespace idk
             graphics.PreferredBackBufferWidth = 1280;
             graphics.ApplyChanges();
 
-            player = new Rect(width / 2, height / 2, Color.Beige, spriteBatch, 10, 20);
+            player = new Rect(width / 2, height / 2, Color.Beige, 10, 20);
 
 
             base.Initialize();
@@ -95,7 +95,7 @@ namespace idk
             if(mState.LeftButton == ButtonState.Pressed || kstate.IsKeyDown(Keys.A))
             {
 
-                rects[rectID] = new Rect(mState.X, mState.Y, currColor, spriteBatch);
+                rects[rectID] = new Rect(mState.X, mState.Y, currColor);
                 rectID++;
                 //Console.WriteLine("Rectangle count is now : " + Data.rectID);
 
@@ -140,7 +140,7 @@ namespace idk
             if (kstate.IsKeyDown(Keys.C))
             {
 
-                rectsPos = new Vector2[4096];
+                rects = new Rect[4096];
                 rectID = 0;
 
             }

@@ -26,7 +26,7 @@ namespace idk
         public static int timeSinceLastKeyStroke = 0;
         public static int FPS;
         public static GraphicsDeviceManager graphics;
-        public static Rect[] rects = new Rect[2048];
+        public static Rect[] rects = new Rect[4096];
 
 
         public enum Dirrections { LEFT, RIGHT, UP, DOWN, NONE};
