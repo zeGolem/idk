@@ -70,3 +70,27 @@ D:\GDrive\dev\idk\idk\obj\Debug\idk.csproj.CoreCompileInputs.cache
 D:\GDrive\dev\idk\idk\obj\Debug\idk.csproj.CopyComplete
 D:\GDrive\dev\idk\idk\obj\Debug\idk.exe
 D:\GDrive\dev\idk\idk\obj\Debug\idk.pdb
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\Content\ball.xnb
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\Content\Font.xnb
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\idk.exe
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\idk.pdb
+D:\GD dev\dev\idk\idk\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+D:\GD dev\dev\idk\idk\obj\Debug\idk.csprojAssemblyReference.cache
+D:\GD dev\dev\idk\idk\obj\Debug\idk.LoadMGR.resources
+D:\GD dev\dev\idk\idk\obj\Debug\idk.SaveMGR.resources
+D:\GD dev\dev\idk\idk\obj\Debug\idk.csproj.GenerateResource.cache
+D:\GD dev\dev\idk\idk\obj\Debug\idk.csproj.CoreCompileInputs.cache
+D:\GD dev\dev\idk\idk\obj\Debug\idk.csproj.CopyComplete
+D:\GD dev\dev\idk\idk\obj\Debug\idk.exe
+D:\GD dev\dev\idk\idk\obj\Debug\idk.pdb

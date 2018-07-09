@@ -49,6 +49,7 @@
     <Compile Include="LoadMGR.Designer.cs">
       <DependentUpon>LoadMGR.cs</DependentUpon>
     </Compile>
+    <Compile Include="Player.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="SaveMGR.cs">
       <SubType>Form</SubType>

@@ -11,40 +11,59 @@ namespace idk
 {
     public class Rect
     {
-        public SpriteBatch spriteBatch;
         public int X, Y, sX, sY;
         public Color c;
         public Texture2D rectangleTexture;
-        public Rect(int posX, int posY, Color color, SpriteBatch sb, int sizeX = 10, int sizeY = 10)
+        public int rX, rY;
+        int s;
+        public Rect(int posX, int posY, Color color, int sizeX = 10, int sizeY = 10)
         {
 
             rectangleTexture = new Texture2D(graphics.GraphicsDevice, 1, 1);
             rectangleTexture.SetData(new[] { Color.White });
-            spriteBatch = sb;
             X = posX;
             Y = posY;
             sX = sizeX;
             sY = sizeY;
             c = color;
+            rX = X * s;
+            rY = Y * s;
 
         }
 
         public void Draw(SpriteBatch sb)
         {
 
-            sb.Draw(rectangleTexture, new Rectangle(X, Y, sX, sY), c);
+            sb.Draw(rectangleTexture, new Rectangle(rX, rY, sX * s, sY * s), c);
 
         } 
         
         public bool isCollliding(Rect o)
         {
-            
-            if(o != null && this.X + this.sX >= o.X && this.X <= o.X + o.sX && this.Y + this.sY >= o.Y && this.Y <= o.Y + o.sY)
+            //Console.WriteLine("called by {0}", this.ToString());
+            if(o != null && this.rX + this.sX >= o.rX && this.rX <= o.rX + o.sX && this.rY + this.sY >= o.rY && this.rY <= o.rY + o.sY)
             {
                 return true;
             }
             return false;
             
+        }
+        public void Update(int scl, bool invertSXSYXY = false)
+        {
+            if (!invertSXSYXY)
+            {
+                rX = X * scl;
+                rY = Y * scl;
+            }
+            else
+            {
+                if (scl != 0)
+                {
+                    Y = rY / scl;
+                    X = rX / scl;
+                }
+            }
+            s = scl;
         }
     }
     
