@@ -34,6 +34,15 @@ namespace idk
         {
             sb.Draw(rectangleTexture, new Rectangle(X, Y, sX * s, sY * s), c);
         }
+        new public bool isCollliding(Rect o)
+        {
+            if (o != null && this.X + this.sX * this.s >= o.X * o.s && this.X <= o.X * o.s + o.sX * o.s && this.Y + this.sY * this.s >= o.Y * o.s && this.Y <= o.Y * o.s + o.sY * o.s)
+            {
+                Console.WriteLine("called by {0} with arg : {1} and returning true", this.ToString(), o.ToString());
+                return true;
+            }
+            return false;
 
+        }
     }
 }

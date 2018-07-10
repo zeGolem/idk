@@ -15,7 +15,7 @@ namespace idk
         public Color c;
         public Texture2D rectangleTexture;
         public int rX, rY;
-        int s;
+        public int s;
         public Rect(int posX, int posY, Color color, int sizeX = 10, int sizeY = 10)
         {
 
@@ -40,9 +40,10 @@ namespace idk
         
         public bool isCollliding(Rect o)
         {
-            //Console.WriteLine("called by {0}", this.ToString());
+            //Console.WriteLine("called by {0} with arg : {1}", this.ToString(), o.ToString());
             if(o != null && this.rX + this.sX >= o.rX && this.rX <= o.rX + o.sX && this.rY + this.sY >= o.rY && this.rY <= o.rY + o.sY)
             {
+                Console.WriteLine("called by {0} with arg : {1} and returning true", this.ToString(), o.ToString());
                 return true;
             }
             return false;
