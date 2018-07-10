@@ -121,13 +121,24 @@ namespace idk
                 //test if there is already a rect drawn here
                 bool shouldDraw = true;
                 for (int i = 0; i < rectID; i++)
-                    if (rects[i].X == posXscl && rects[i].Y == posYscl)
-                        shouldDraw = false;
+                    if(rects[i]!=null)
+                        if (rects[i].X == posXscl && rects[i].Y == posYscl)
+                            shouldDraw = false;
                 if (shouldDraw)
                 {
                     rects[rectID] = new Rect(posXscl, posYscl, currColor, 1, 1);
                     rectID++;
                 }
+
+            }
+            //erase
+            if(mState.RightButton == ButtonState.Pressed)
+            {
+
+                for (int i = 0; i < rectID; i++)
+                    if(rects[i]!=null)
+                        if (rects[i].X == posXscl && rects[i].Y == posYscl)
+                            rects[i] = null;
 
             }
 
@@ -187,7 +198,7 @@ namespace idk
                 player.X-=1;
                 foreach (Rect o in rects)
                     if (player.isCollliding(o))
-                        player.X+=scale;
+                        player.X+=1;
             }
             if (kstate.IsKeyDown(Keys.D))
             {
