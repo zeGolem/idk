@@ -16,6 +16,7 @@ namespace idk
         SpriteBatch spriteBatch;
         int posXscl, posYscl;
         Rect mousePtr;
+        Button btn;
 
         public Game1()
         {
@@ -51,6 +52,9 @@ namespace idk
 
             mousePtr = new Rect(0, 0, Color.White, 5, 5);
 
+            btn = new Button(100, 100, 100, 50, "test", Color.Beige);
+            btn.ButtonClick += new EventHandler(btnTestClickEvent);
+
             base.Initialize();
         }
 
@@ -58,6 +62,13 @@ namespace idk
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
+        /// 
+
+        static void btnTestClickEvent(object sender, EventArgs e)
+        {
+            Console.WriteLine("test");
+        }
+
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
@@ -225,12 +236,11 @@ namespace idk
 
             //update the rects
             foreach (Rect r in rects)
-                if(r!=null)
-                    r.Update(scale);
-            if(player!=null)
-                player.Update(scale);
-            if(mousePtr!=null)
-                mousePtr.Update(1);
+                r?.Update(scale);
+
+            player?.Update(scale);
+
+            mousePtr?.Update(1);
 
             //color mgr
             switch (colorID)
@@ -251,7 +261,9 @@ namespace idk
                     currColor = Color.Transparent;
                     break;
             }
-            
+
+            btn.Update();
+
             //That should give me the framerate of the game, but it doesn't seem to work...
             FPS = (int)(1/gameTime.ElapsedGameTime.TotalSeconds);
 
@@ -278,19 +290,20 @@ namespace idk
                 
                 foreach(Rect r in rects)
                 {
-                    if(r!=null)
-                        r.Draw(spriteBatch);
+                    r?.Draw(spriteBatch);
                 }
             }
-            if(player!=null)
-                player.Draw(spriteBatch);
+                player?.Draw(spriteBatch);
             
                 
 
             spriteBatch.Draw(mousePointer, new Rectangle(posXscl * scale, posYscl * scale, scale, scale), Color.Chocolate);
 
-            if (mousePtr != null)
-                mousePtr.Draw(spriteBatch);
+            btn?.Draw(spriteBatch, scale, font);
+
+            mousePtr?.Draw(spriteBatch);
+
+            
             //COLOR SELECTOR
 
             //SQUARE ARROUND DA COLOR

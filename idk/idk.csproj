@@ -42,6 +42,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Button.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="Gui.cs" />
     <Compile Include="LoadMGR.cs">
